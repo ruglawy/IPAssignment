@@ -17,16 +17,6 @@ class User {
         this.cart = [];
     }
 
-    /*addToCart(item) {
-        this.cart.push(item);
-    }
-
-    removeFromCart(item) {
-        const index = this.cart.indexOf(item);
-        if (index !== -1) {
-            this.cart.splice(index, 1);
-        }
-    }*/
 }
 
 const sampleItem = new Item('images/blacktshirt.jpg',
