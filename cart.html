@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Shop Addict Cart</title>
+    <script src="shared.js"></script>
+    <script src="cartload.js"></script>
+</head>
+<body>
+<nav class="navbar">
+    <div class="navbar-left">
+        <img src="images/shopaddictlogo.jpg" alt="Shop Addict Logo" width="25" height="25">
+    </div>
+    <div class="navbar-right">
+        <ul>
+            <li><a href="store.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="submenu">
+                <a href="#">Contact Us ▼</a>
+                <ul>
+                    <li><a href="contactemail.html">Email</a></li>
+                    <li><a href="contactphone.html">Phone</a></li>
+                    <li><a href="contactlivechat.html">Live Chat</a></li>
+                </ul>
+            </li>
+            <li><a id="cartnavbar" href="#" style="color: #00668e">Cart</a></li>
+            <li><a href="account.html">My Account</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="cart-container">
+    <img src="images/carticoninvisible.png" width="150" height="150">
+    <h2>Your Cart Items</h2>
+    <div id="cartItems"></div>
+</div>
+
+<footer>
+    <p class="copyright">Copyrights reserved</p>
+</footer>
+
+<script src="cartload.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

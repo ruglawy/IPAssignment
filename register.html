@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Shop Addict Registration</title>
+    <script src="shared.js"></script>
+</head>
+<body>
+<div class="registration-container">
+    <img src="images/shopaddictlogo.jpg" height="200" width="300">
+    <h2>Create an account and become an addict!</h2>
+    <form id="registrationForm">
+        <table>
+            <tr>
+                <td align="right"><label for="name">Name:</label></td>
+                <td align="left"><input type="text" id="name" name="name" placeholder="Your name" required></td>
+            </tr>
+            <tr>
+                <td align="right"><label for="gender">Gender:</label></td>
+                <td align="left">
+                    <select id="gender" name="gender" required>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td align="right"><label for="dob">Date of Birth:</label></td>
+                <td align="left"><input type="date" id="dob" name="dob" required></td>
+            </tr>
+            <tr>
+                <td align="right"><label for="email">Email:</label></td>
+                <td align="left"><input type="email" id="email" name="email" placeholder="Your email" required></td>
+            </tr>
+            <tr>
+                <td align="right"><label for="username">Username:</label></td>
+                <td align="left"><input type="text" id="username" name="username" placeholder="Your username" required></td>
+            </tr>
+            <tr>
+                <td align="right"><label for="password">Password:</label></td>
+                <td align="left"><input type="password" id="password" name="password" placeholder="Your password" required></td>
+            </tr>
+        </table>
+        <br>
+        <input class="pagebuttons" type="button" onclick="register()" value="Register now!" style="font-weight: bold;">
+    </form>
+    <p>Already have an account? <a href="login.html">Login here!</a></p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

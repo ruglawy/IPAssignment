@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Contact Us - Shop Addict</title>
+    <script src="shared.js"></script>
+</head>
+<body>
+<nav class="navbar">
+    <div class="navbar-left">
+        <img src="images/shopaddictlogo.jpg" alt="Shop Addict Logo" width="25" height="25">
+    </div>
+    <div class="navbar-right">
+        <ul>
+            <li><a href="store.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="submenu">
+                <a href="#" style="color: #00668e">Contact Us ▼</a>
+                <ul>
+                    <li><a href="contactemail.html">Email</a></li>
+                    <li><a href="contactphone.html">Phone</a></li>
+                    <li><a href="#" style="color: #00668e">Live Chat</a></li>
+                </ul>
+            </li>
+            <li><a id="cartnavbar" href="cart.html">Cart</a></li>
+            <li><a href="account.html">My Account</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="contact-container">
+    <img src="images/livechatlogoblue.png" width="150" height="150">
+    <h2>Contact Us by Phone</h2>
+    <form class="contact-form">
+        <table>
+            <tr>
+                <td>Name:</td>
+                <td><input type="text" id="name" placeholder="Your Name" required></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button id="submitRequest" onclick="submitRequest()">Submit Request</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+<footer>
+    <p class="copyright">Copyrights reserved</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

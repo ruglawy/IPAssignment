@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Shop Addict Account</title>
+    <script src="shared.js"></script>
+</head>
+<body>
+<nav class="navbar">
+    <div class="navbar-left">
+        <img src="images/shopaddictlogo.jpg" alt="Shop Addict Logo" width="25" height="25">
+    </div>
+    <div class="navbar-right">
+        <ul>
+            <li><a href="store.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="submenu">
+                <a href="#">Contact Us ▼</a>
+                <ul>
+                    <li><a href="contactemail.html">Email</a></li>
+                    <li><a href="contactphone.html">Phone</a></li>
+                    <li><a href="contactlivechat.html">Live Chat</a></li>
+                </ul>
+            </li>
+            <li><a id="cartnavbar" href="cart.html">Cart</a></li>
+            <li><a href="#" style="color: #00668e">My Account</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="account-container">
+    <img src="images/usericon.png" width="300" height="300">
+    <h2>User Details</h2>
+    <div class="user-details">
+        <p><strong>Name: </strong><span  id="name"></span></p>
+        <p><strong>Email: </strong><span id="email"></span></p>
+        <p><strong>Username: </strong><span id="username"></span></p>
+    </div>
+
+    <button class="logout-button" onclick="logout()" style="width: 100px">Logout</button>
+</div>
+
+<footer>
+    <p class="copyright">Copyrights reserved</p>
+</footer>
+
+<script src="script.js"></script>
+<script src="accountload.js"></script>
+</body>
+</html>
