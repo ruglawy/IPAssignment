@@ -285,3 +285,35 @@ footer {
 #submitRequest:hover {
     background-color: #07528e;
 }
+
+.submenu {
+    position: relative;
+}
+
+
+.submenu:hover .help-menu {
+    display: block;
+}
+
+.submenu .help-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: black;
+    opacity: 0.7;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.help-menu .contact-us-submenu ul{
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: -100%;
+    background-color: black;
+    opacity: 0.7;
+    padding: 10px;
+    border-radius: 4px;
+}
+

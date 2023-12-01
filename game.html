@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Shop Addict Account</title>
+    <title>Trivia Game - Shop Addict</title>
 </head>
+
 <body>
 <nav class="navbar">
     <div class="navbar-left">
@@ -30,21 +32,21 @@
                 </ul>
             </li>
             <li><a id="cartnavbar" href="cart.html">Cart</a></li>
-            <li><a href="#" style="color: #00668e">My Account</a></li>
+            <li><a href="account.html">My Account</a></li>
         </ul>
     </div>
 </nav>
 
-<div class="account-container">
-    <img src="images/usericon.png" width="300" height="300">
-    <h2>User Details</h2>
-    <div class="user-details">
-        <p><strong>Name: </strong><span  id="name"></span></p>
-        <p><strong>Email: </strong><span id="email"></span></p>
-        <p><strong>Username: </strong><span id="username"></span></p>
+<div class="welcome-message">
+    <h1>Trivia Game</h1>
+    <div class="trivia-question">
+        <p id="questionText"></p>
     </div>
-
-    <button class="logout-button" onclick="logout()" style="width: 100px">Logout</button>
+    <div class="trivia-answer">
+        <p>Answer</p>
+        <input type="text" id="answerInput" placeholder="Type your answer here">
+        <button onclick="checkAnswer(currentQuestion.answer, document.getElementById('answerInput').value.trim())">Submit Answer</button>
+    </div>
 </div>
 
 <footer>
@@ -53,22 +55,12 @@
 
 <script src="script.js"></script>
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        var submenu = document.querySelector('.help-menu .contact-us-submenu');
+    var randomIndex = Math.floor(Math.random() * questions.length);
+    var currentQuestion = questions[randomIndex];
 
-        submenu.addEventListener('click', function (event) {
-            event.stopPropagation();
-
-            var sublist = this.querySelector('ul');
-            sublist.style.display = (sublist.style.display === 'block') ? 'none' : 'block';
-        });
-
-        document.addEventListener('click', function (event) {
-            if (!submenu.contains(event.target)) {
-                submenu.querySelector('ul').style.display = 'none';
-            }
-        });
-    });
+    var questionText = document.getElementById('questionText');
+    questionText.textContent = currentQuestion.question;
 </script>
 </body>
+
 </html>

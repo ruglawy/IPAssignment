@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Shop Addict Store</title>
-    <script src="shared.js"></script>
 </head>
 <body>
 <nav class="navbar">
@@ -17,21 +16,30 @@
             <li><a href="#" style="color: #00668e">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li class="submenu">
-                <a href="#">Contact Us ▼</a>
-                <ul>
-                    <li><a href="contactemail.html">Email</a></li>
-                    <li><a href="contactphone.html">Phone</a></li>
-                    <li><a href="contactlivechat.html">Live Chat</a></li>
+                <a href="#">Help ▼</a>
+                <ul class="help-menu">
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li class="contact-us-submenu">
+                        <a href="#">◀ Contact Us</a>
+                        <ul>
+                            <li><a href="contactemail.html">Email</a></li>
+                            <li><a href="contactphone.html">Phone</a></li>
+                            <li><a href="contactlivechat.html">Live Chat</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </li>
             <li><a id="cartnavbar" href="cart.html">Cart</a></li>
             <li><a href="account.html">My Account</a></li>
         </ul>
     </div>
+
+
 </nav>
 
 <div class="welcome-message">
-    <h2 id="welcomeh2"></h2>
+    <h1 id="welcomeh2"></h1>
+    <p>Check the "FAQ" page in "Help" section for a small surprise 😉</p>
 </div>
 
 <div class="slidingtext">
@@ -145,5 +153,24 @@
 </footer>
 
 <script src="script.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var submenu = document.querySelector('.help-menu .contact-us-submenu');
+
+        submenu.addEventListener('click', function (event) {
+            event.stopPropagation();
+
+            var sublist = this.querySelector('ul');
+            sublist.style.display = (sublist.style.display === 'block') ? 'none' : 'block';
+        });
+
+        document.addEventListener('click', function (event) {
+            if (!submenu.contains(event.target)) {
+                submenu.querySelector('ul').style.display = 'none';
+            }
+        });
+    });
+</script>
+
 </body>
 </html>
