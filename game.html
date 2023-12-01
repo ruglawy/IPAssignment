@@ -61,6 +61,24 @@
     var questionText = document.getElementById('questionText');
     questionText.textContent = currentQuestion.question;
 </script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var submenu = document.querySelector('.help-menu .contact-us-submenu');
+
+        submenu.addEventListener('click', function (event) {
+            event.stopPropagation();
+
+            var sublist = this.querySelector('ul');
+            sublist.style.display = (sublist.style.display === 'block') ? 'none' : 'block';
+        });
+
+        document.addEventListener('click', function (event) {
+            if (!submenu.contains(event.target)) {
+                submenu.querySelector('ul').style.display = 'none';
+            }
+        });
+    });
+</script>
 </body>
 
 </html>
