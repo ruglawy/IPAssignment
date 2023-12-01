@@ -214,7 +214,7 @@ function register() {
 function logout() {
     loggedInIndex = -1;
     saveDataToLocalStorage();
-    window.location.href = "login.html";
+    window.location.href = "index.html";
 }
 
 document.addEventListener('DOMContentLoaded', function () {
