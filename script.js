@@ -26,10 +26,6 @@ class Trivia {
     }
 }
 
-const sampleItem = new Item('images/blacktshirt.jpg',
-    'Black T-Shirt',
-    17.99);
-
 const sampleUser = new User('Kareem Ramzi',
     'kareemramzi',
     '123',
@@ -124,6 +120,9 @@ function loadCartItems() {
             checkoutButton.style.fontWeight = 'bold';
             checkoutButton.addEventListener('click', function () {
                 alert('Checkout complete! Thank you for shopping with us!');
+                users[loggedInIndex].cart = [];
+                saveDataToLocalStorage();
+                window.location.reload();
             });
 
             cartContainer.appendChild(checkoutButton);
@@ -174,7 +173,7 @@ function register() {
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
 
-    if (!/^[a-zA-Z]+$/.test(name)) {
+    if (!/^[a-zA-Z\s]+$/.test(name)) {
         alert('Invalid name. Please enter a name with only alphabets.');
         return;
     }
@@ -209,6 +208,7 @@ function register() {
 
     alert('Registration successful! Welcome to Shop Addict.');
     document.getElementById('registrationForm').reset();
+    window.location.href = "index.html";
 }
 
 function logout() {
@@ -254,5 +254,17 @@ function checkAnswer(answer, correctAnswer){
         alert('Incorrect answer :(, please try again!');
     }
     location.reload();
+}
+
+function filterProducts(category) {
+    var cards = document.querySelectorAll('.card');
+
+    cards.forEach(function(card) {
+        if (category === 'All' || card.classList.contains(category)) {
+            card.style.display = 'block';
+        } else {
+            card.style.display = 'none';
+        }
+    });
 }
 

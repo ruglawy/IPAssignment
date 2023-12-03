@@ -19,14 +19,16 @@
                 <a href="#">Help ▼</a>
                 <ul class="help-menu">
                     <li><a href="faq.html">FAQ</a></li>
-                    <li class="contact-us-submenu">
-                        <a href="#">◀ Contact Us</a>
-                        <ul>
-                            <li><a href="contactemail.html">Email</a></li>
-                            <li><a href="contactphone.html">Phone</a></li>
-                            <li><a href="contactlivechat.html">Live Chat</a></li>
-                        </ul>
-                    </li>
+                    <div class="contactsubmenu">
+                        <li class="contact-us-submenu">
+                            <a href="#">◀ Contact Us</a>
+                            <ul>
+                                <li><a href="contactemail.html">Email</a></li>
+                                <li><a href="contactphone.html">Phone</a></li>
+                                <li><a href="contactlivechat.html">Live Chat</a></li>
+                            </ul>
+                        </li>
+                    </div>
                 </ul>
             </li>
             <li><a id="cartnavbar" href="cart.html">Cart</a></li>
@@ -37,7 +39,42 @@
 
 </nav>
 
-<div class="welcome-message">
+<div class="side-menu">
+    <ul>
+        <li>
+            <a href="#" onclick="filterProducts('All')">
+                <img src="images/wardrobe.png" height="40" width="40">
+                <p>All</p>
+            </a>
+        </li>
+        <li>
+            <a href="#" onclick="filterProducts('hoodie')">
+                <img src="images/hoodie.png" height="40" width="40">
+                <p>Hoodies</p>
+            </a>
+        </li>
+        <li>
+            <a href="#" onclick="filterProducts('tshirt')">
+                <img src="images/tshirt.png" height="40" width="40">
+                <p>T-Shirts</p>
+            </a>
+        </li>
+        <li>
+            <a href="#" onclick="filterProducts('shoes')">
+                <img src="images/sneakers.png" height="40" width="40">
+                <p>Shoes</p>
+            </a>
+        </li>
+        <li>
+            <a href="#" onclick="filterProducts('jacket')">
+                <img src="images/jacket.png" height="40" width="40">
+                <p>Jackets</p>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<div class="welcome-message" style="padding: 0 0 0 150px">
     <video width="320" height="240" autoplay muted loop>
         <source src="images/samplevid.mp4" type="video/mp4">
         Your browser does not support the video tag.
@@ -46,14 +83,14 @@
     <p>Check the "FAQ" page in "Help" section for a small surprise 😉</p>
 </div>
 
-<div class="slidingtext">
+<div class="slidingtext" style="padding: 0 0 0 150px;">
     <marquee style="line-height: 50px; box-shadow: 7px 7px 7px 7px rgba(0, 0, 0, 0.3);" width="1310px" direction="left" height="50px" scrollamount="10">
         Explore the latest trends in fashion at Shop Addict. Unleash your style with our exclusive collection!
     </marquee>
 </div>
 
 <div class="item-cards">
-    <div class="card">
+    <div class="card tshirt">
         <img src="images/blacktshirt.jpg" alt="Black T-Shirt" width="500" height="500">
         <div class ="product_desc">
             <h3>Black T-Shirt</h3>
@@ -61,7 +98,7 @@
             <button class="add-to-cart">Add To Cart</button>
         </div>
     </div>
-    <div class="card">
+    <div class="card hoodie">
         <img src="images/hoodiesbundle.jpg" alt="Hoodies Bundle" width="500" height="500">
         <div class ="product_desc">
             <h3>Hoodies Bundle</h3>
@@ -69,7 +106,7 @@
             <button class="add-to-cart">Add To Cart</button>
         </div>
     </div>
-    <div class="card">
+    <div class="card tshirt">
         <img src="images/greentshirt.jpeg" alt="Green T-Shirt" width="500" height="500">
         <div class ="product_desc">
             <h3>Green T-Shirt</h3>
@@ -77,7 +114,7 @@
             <button class="add-to-cart">Add To Cart</button>
         </div>
     </div>
-    <div class="card">
+    <div class="card shoes">
         <img src="images/jumpmantwo.webp" alt="Jumpman Two" width="500" height="500">
         <div class ="product_desc">
             <h3>Jumpman Two Trey</h3>
@@ -85,7 +122,7 @@
             <button class="add-to-cart">Add To Cart</button>
         </div>
     </div>
-    <div class="card">
+    <div class="card shoes">
         <img src="images/newbalance.webp" alt="New Balance Shoes" width="500" height="500">
         <div class ="product_desc">
             <h3>New Balance Training Shoes</h3>
@@ -93,7 +130,7 @@
             <button class="add-to-cart">Add To Cart</button>
         </div>
     </div>
-    <div class="card">
+    <div class="card tshirt">
         <img src="images/nikeswoosh.webp" alt="Nike Swoosh" width="500" height="500">
         <div class ="product_desc">
             <h3>Nike Swoosh T-Shirt</h3>
@@ -101,7 +138,7 @@
             <button class="add-to-cart">Add To Cart</button>
         </div>
     </div>
-    <div class="card">
+    <div class="card tshirt">
         <img src="images/jordanflight.webp" alt="Jordan Flight" width="500" height="500">
         <div class ="product_desc">
             <h3>Jordan Flight T-Shirt</h3>
@@ -109,7 +146,7 @@
             <button class="add-to-cart">Add To Cart</button>
         </div>
     </div>
-    <div class="card">
+    <div class="card hoodie">
         <img src="images/adidastrefoil.webp" alt="Adidas Trefoil" width="500" height="500">
         <div class ="product_desc">
             <h3>Adidas Trefoil Hoodie</h3>
@@ -117,7 +154,7 @@
             <button class="add-to-cart">Add To Cart</button>
         </div>
     </div>
-    <div class="card">
+    <div class="card hoodie">
         <img src="images/marceloburlon.jpg" alt="Marcelo Burlon" width="500" height="500">
         <div class ="product_desc">
             <h3>Marcelo Burlon Wings Hoodie</h3>
@@ -125,7 +162,7 @@
             <button class="add-to-cart">Add To Cart</button>
         </div>
     </div>
-    <div class="card">
+    <div class="card hoodie">
         <img src="images/balenciaga.jpg" alt="Balenciaga" width="500" height="500">
         <div class ="product_desc">
             <h3>Balenciaga Hoodie</h3>
@@ -133,7 +170,7 @@
             <button class="add-to-cart">Add To Cart</button>
         </div>
     </div>
-    <div class="card">
+    <div class="card hoodie">
         <img src="images/essentials.webp" alt="Essentials" width="500" height="500">
         <div class ="product_desc">
             <h3>Essentials Hoodie</h3>
@@ -141,7 +178,7 @@
             <button class="add-to-cart">Add To Cart</button>
         </div>
     </div>
-    <div class="card">
+    <div class="card jacket">
         <img src="images/calvinklein.webp" alt="Calvin Klein" width="500" height="500">
         <div class ="product_desc">
             <h3>Calvin Klein Jacket</h3>
@@ -157,24 +194,6 @@
 </footer>
 
 <script src="script.js"></script>
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        var submenu = document.querySelector('.help-menu .contact-us-submenu');
-
-        submenu.addEventListener('click', function (event) {
-            event.stopPropagation();
-
-            var sublist = this.querySelector('ul');
-            sublist.style.display = (sublist.style.display === 'block') ? 'none' : 'block';
-        });
-
-        document.addEventListener('click', function (event) {
-            if (!submenu.contains(event.target)) {
-                submenu.querySelector('ul').style.display = 'none';
-            }
-        });
-    });
-</script>
 
 </body>
 </html>

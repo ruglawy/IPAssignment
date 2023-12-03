@@ -19,14 +19,16 @@
                 <a href="#" style="color: #00668e">Help ▼</a>
                 <ul class="help-menu">
                     <li><a href="faq.html">FAQ</a></li>
-                    <li class="contact-us-submenu">
-                        <a href="#">◀ Contact Us</a>
-                        <ul>
-                            <li><a href="contactemail.html">Email</a></li>
-                            <li><a href="contactphone.html">Phone</a></li>
-                            <li><a href="#" style="color: #00668e">Live Chat</a></li>
-                        </ul>
-                    </li>
+                    <div class="contactsubmenu">
+                        <li class="contact-us-submenu">
+                            <a href="#" style="color: #00668e">◀ Contact Us</a>
+                            <ul>
+                                <li><a href="contactemail.html">Email</a></li>
+                                <li><a href="contactphone.html">Phone</a></li>
+                                <li><a href="#" style="color: #00668e">Live Chat</a></li>
+                            </ul>
+                        </li>
+                    </div>
                 </ul>
             </li>
             <li><a id="cartnavbar" href="cart.html">Cart</a></li>
@@ -58,23 +60,5 @@
 </footer>
 
 <script src="script.js"></script>
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        var submenu = document.querySelector('.help-menu .contact-us-submenu');
-
-        submenu.addEventListener('click', function (event) {
-            event.stopPropagation();
-
-            var sublist = this.querySelector('ul');
-            sublist.style.display = (sublist.style.display === 'block') ? 'none' : 'block';
-        });
-
-        document.addEventListener('click', function (event) {
-            if (!submenu.contains(event.target)) {
-                submenu.querySelector('ul').style.display = 'none';
-            }
-        });
-    });
-</script>
 </body>
 </html>
